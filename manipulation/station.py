@@ -965,7 +965,7 @@ def MakeHardwareStation(
     )
 
     if parser_prefinalize_callback:
-        parser_prefinalize_callback(parser)
+        parser_prefinalize_callback(parser, sim_plant)
 
     # To support JointStiffnessControl, we need a pre-finalize version, too.
     _ApplyPrefinalizeDriverConfigsSim(
@@ -1037,7 +1037,7 @@ def MakeHardwareStation(
     builder.ExportOutput(scene_graph.get_query_output_port(), "query_object")
 
     if prebuild_callback:
-        prebuild_callback(builder)
+        prebuild_callback(builder, scene_graph)
 
     diagram = robot_builder.Build()
     diagram.set_name("station")
