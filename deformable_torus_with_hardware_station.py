@@ -16,6 +16,9 @@ from pydrake.all import (
 
 from manipulation.station import LoadScenario, MakeHardwareStation
 
+# Note that this requires meldis `python3 -m pydrake.visualization.meldis` to be started
+# in a different terminal for visualization.
+
 # See https://drake.mit.edu/doxygen_cxx/classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html
 # Different configs determine whether the torus passes around the red block or not.
 
